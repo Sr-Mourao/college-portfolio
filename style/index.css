@@ -1,0 +1,119 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #181818;
+    /* Cor de fundo escura */
+    color: #EAEAEA;
+    /* Cor de texto clara */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #2d2d2d;
+    /* Cor de fundo escura para o cabeçalho */
+    color: #ECEFF1;
+    /* Cor de texto clara */
+    padding: 1rem 0;
+}
+
+nav.tab-navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    /* Permite quebrar a linha em telas pequenas */
+}
+
+nav.tab-navigation ul li {
+    margin: 0 1rem;
+}
+
+nav.tab-navigation ul li a {
+    color: #ECEFF1;
+    /* Texto claro para os links */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    /* Bordas mais suaves */
+}
+
+nav.tab-navigation ul li a.active,
+nav.tab-navigation ul li a:hover {
+    border-bottom: 2px solid #00aaff;
+    /* Azul claro para hover ou link ativo */
+    background-color: #333;
+    /* Fundo levemente escuro para hover */
+}
+
+/* Estilos das abas */
+main {
+    padding: 2rem;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+h2 {
+    margin-top: 0;
+    color: #EAEAEA;
+    /* Cor clara para títulos */
+}
+
+img {
+    width: 40px;
+}
+
+p {
+    color: #B0B0B0;
+    /* Texto em cinza claro para parágrafos */
+}
+
+a:hover,
+button:hover {
+    color: #00d0ff;
+    /* Azul mais claro ao passar o mouse */
+}
+
+
+@media (max-width: 768px) {
+    nav.tab-navigation ul {
+        flex-direction: column;
+        /* Alinha os itens verticalmente */
+        align-items: center;
+    }
+
+    nav.tab-navigation ul li {
+        margin: 0.5rem 0;
+        /* Reduz espaço entre os itens */
+    }
+
+    header {
+        padding: 1rem;
+        /* Reduz o espaçamento geral */
+    }
+}
+
+@media (max-width: 480px) {
+    nav.tab-navigation ul li a {
+        font-size: 0.9rem;
+        /* Reduz o tamanho do texto */
+        padding: 0.5rem;
+        /* Ajusta o preenchimento */
+    }
+
+    main {
+        padding: 1rem;
+        /* Reduz o espaçamento interno */
+    }
+}

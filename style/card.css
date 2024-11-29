@@ -1,0 +1,90 @@
+/* Container Responsivo de Cards */
+.card-container {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Card Estilizado */
+.card {
+    background: linear-gradient(135deg, #1e1e1e, #292929);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 209, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 209, 255, 0.2);
+    overflow: hidden;
+    position: relative;
+    padding: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 209, 255, 0.4);
+}
+
+/* Títulos dos Cards */
+.card h2 {
+    text-align: center;
+    margin-top: 0;
+    color: #00aaff;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card h3 {
+    color: #c4c4c4;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Conteúdo dos Cards */
+.card p {
+    text-align: justify;
+    color: #c4c4c4;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.content-links-projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    color: #0366d6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    main.card-container {
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem 0;
+    }
+
+    .card h2 {
+        font-size: 1.2rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+}
